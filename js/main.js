@@ -25,4 +25,12 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(userChoice(), getComputerChoice()))
+function game() {
+    let runs = 0;
+    while (runs < 5) {
+        console.log(playRound(userChoice(), getComputerChoice()))
+        runs += 1;
+    }
+}
+
+game()
