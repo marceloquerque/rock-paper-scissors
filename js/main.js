@@ -8,5 +8,21 @@ function getComputerChoice() {
         return "scissors"
     }
 }
-
 getComputerChoice()
+
+function userChoice() {
+    let userChoice = prompt("Choose: rock, paper, or scissors")
+    return userChoice.toLowerCase()
+}
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return `It's a draw! ${playerSelection} equals ${computerSelection}`
+    } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
+        return `You win! ${playerSelection} beats ${computerSelection}`
+    } else {
+        return `You lose! ${computerSelection} beats ${playerSelection}`
+    }
+}
+
+console.log(playRound(userChoice(), getComputerChoice()))
