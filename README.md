@@ -1,4 +1,4 @@
-# Odin Foundation Landing Page ⭐️
+# Odin Project - Rock, Paper, Scissors ⭐️
 
 Odin Project Rock, Paper, Scissors game to showcase foundations of Javascript.
 
