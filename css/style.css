@@ -10,6 +10,8 @@ img {
 }
 
 body {
+    background-color: #001c40;
+    color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +50,9 @@ body {
 
 .option-box {
     cursor: pointer;
+    background-color: #183153;
+    border-radius: .5rem;
+    padding: 20px 30px;
 }
 
 .footer {
@@ -58,4 +63,5 @@ body {
 
 .footer img {
     width: 32px;
+    
 }
