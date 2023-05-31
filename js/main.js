@@ -1,37 +1,37 @@
-const scoreInfo = document.querySelector(".score-info").innerHTML;
-var scoreMessage = document.querySelector(".score-message");
-const playerChoice = document.querySelector(".player-choice").innerHTML;
-const playerScore = document.querySelector(".player-score").innerHTML;
-const compChoice = document.querySelector(".comp-choice").innerHTML;
-const compScore = document.querySelector(".comp-score").innerHTML;
+let scoreInfo = document.querySelector(".score-info");
+let scoreMessage = document.querySelector(".score-message");
+let playerChoice = document.querySelector(".player-choice");
+let playerScore = document.querySelector(".player-score");
+let compChoice = document.querySelector(".comp-choice");
+let compScore = document.querySelector(".comp-score");
 
 const options = document.querySelectorAll(".option-box");
 Array.from(options).forEach((element) => {
     element.addEventListener('click', userChoice)
 })
 
-function getComputerChoice() {
-    const compChoice = Math.floor(Math.random() * 3) + 1;
-    if (compChoice === 1) {
-        document.querySelector(".comp-choice").innerHTML = "✊"
-    } else if (compChoice === 2) {
-        document.querySelector(".comp-choice").innerHTML = "✋"
-    } else {
-        document.querySelector(".comp-choice").innerHTML = "✌"
-    }
-}
-
 function userChoice(click) {
     getComputerChoice()
+    playRound()
     if (click.target.classList.contains('rock')) {
-        document.querySelector(".player-choice").innerHTML = "✊"
+        playerChoice.innerHTML = "✊"
     } else if (click.target.classList.contains('paper')) {
-        document.querySelector(".player-choice").innerHTML = "✋"
+        playerChoice.innerHTML = "✋"
     } else if (click.target.classList.contains('scissors')) {
-        document.querySelector(".player-choice").innerHTML = "✌"
+        playerChoice.innerHTML = "✌"
     }
 }
 
+function getComputerChoice() {
+    const randomChoice = Math.floor(Math.random() * 3) + 1;
+    if (randomChoice === 1) {
+        compChoice.innerHTML = "✊"
+    } else if (randomChoice === 2) {
+        compChoice.innerHTML = "✋"
+    } else {
+        compChoice.innerHTML = "✌"
+    }
+}
 
 // function game() {
     // let runs = 0;
@@ -46,13 +46,13 @@ function userChoice(click) {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        scoreMessage = `It's a draw! ${playerSelection} equals ${computerSelection}`
+        scoreInfo.innerHTML = `It's a draw! ${playerSelection} equals ${computerSelection}`
     } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
         userScore += 1
-        return `You win! ${playerSelection} beats ${computerSelection}`
+        scoreInfo.innerHTML = `You win! ${playerSelection} beats ${computerSelection}`
     } else {
         compScore += 1
-        return `You lose! ${computerSelection} beats ${playerSelection}`
+        scoreInfo.innerHTML = `You lose! ${computerSelection} beats ${playerSelection}`
     }
 }
 
