@@ -1,3 +1,26 @@
+const scoreInfo = document.querySelector(".score-info").innerHTML;
+const scoreMessage = document.querySelector(".score-message").innerHTML;
+const playerChoice = document.querySelector(".player-choice").innerHTML;
+const playerScore = document.querySelector(".player-score").innerHTML;
+const compChoice = document.querySelector(".comp-choice").innerHTML;
+const compScore = document.querySelector(".comp-score").innerHTML;
+
+const options = document.querySelectorAll(".option-box");
+Array.from(options).forEach((element) => {
+    element.addEventListener('click', userChoice)
+})
+
+function userChoice(click) {
+    if (click.target.classList.contains('rock')) {
+        document.querySelector(".player-choice").innerHTML = "✊"
+    } else if (click.target.classList.contains('paper')) {
+        document.querySelector(".player-choice").innerHTML = "✋"
+    } else if (click.target.classList.contains('scissors')) {
+        document.querySelector(".player-choice").innerHTML = "✌"
+    }
+}
+
+
 // function game() {
 //     let runs = 0;
 //     let userScore = 0;

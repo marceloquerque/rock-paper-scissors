@@ -46,6 +46,10 @@ body {
     font-size: 4.5rem;
 }
 
+.option-box {
+    cursor: pointer;
+}
+
 .footer {
     display: flex;
     align-items: center;
