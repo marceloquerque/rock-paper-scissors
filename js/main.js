@@ -12,7 +12,7 @@ Array.from(options).forEach((element) => {
 
 function userChoice(click) {
     getComputerChoice()
-    playRound()
+    playRound(playerChoice.innerHTML, compChoice.innerHTML)
     if (click.target.classList.contains('rock')) {
         playerChoice.innerHTML = "✊"
     } else if (click.target.classList.contains('paper')) {
@@ -46,13 +46,16 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        scoreInfo.innerHTML = `It's a draw! ${playerSelection} equals ${computerSelection}`
+        scoreInfo.innerHTML = "It's a draw!"
+        scoreMessage.innerHTML =  `${playerSelection} equals ${computerSelection}`
     } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
         userScore += 1
-        scoreInfo.innerHTML = `You win! ${playerSelection} beats ${computerSelection}`
+        scoreInfo.innerHTML = "You win!"
+        scoreMessage.innerHTML = `${playerSelection} beats ${computerSelection}`
     } else {
         compScore += 1
-        scoreInfo.innerHTML = `You lose! ${computerSelection} beats ${playerSelection}`
+        scoreInfo.innerHTML = "You lose!"
+        scoreMessage.innerHTML = `${computerSelection} beats ${playerSelection}`
     }
 }
 
