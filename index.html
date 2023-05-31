@@ -8,35 +8,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Roboto:wght@400;700&amp;display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <div class="header">
-      <div class="header--title">
-        <h1>ROCK</h1>
-        <h1>PAPER</h1>
-        <h1>SCISSORS</h1>
-      </div>
-      <div class="score">
-        <div class="score-board">
-          <h5>PLAYER</h3>
-          <h3>4</h3>
+    <header class="header">
+      <h1 class="title">ROCK PAPER SCISSORS</h1>
+    </header>
+    <main class="main">
+      <div class="scoreboard">
+        <h2 class="score-info">Choose your weapon</h2>
+        <h3 class="score-message">First to score 5 points wins the game</h3>
+        <div class="scores-container">
+          <div class="score-box">
+            <div class="player choice">?</div>
+            <div class="score player">Player: 4</div>
+          </div>
+          <div class="score-box">
+            <div class="comp choice">?</div>
+            <div class="score comp">Computer: 0</div>
+          </div>
         </div>
-        <div class="score-board">
-          <h5>COMP</h5>
-          <h3>0</h3>
+        <div class="option">
+          <div class="option-box">✊</div>
+          <div class="option-box">✋</div>
+          <div class="option-box">✌</div>
         </div>
       </div>
-    </div>
-    <div class="body">
-      <div class="body--header">
-        <h2>Choose your weapon</h2>
-        <h4>First to score 5 points wins the game</h4>
-      </div>
-    </div>
+    </main>
+    <footer class="footer">
+      <p>Copyright © 2023 marceloquerque</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" />
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
