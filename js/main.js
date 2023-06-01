@@ -1,9 +1,17 @@
-let playerChoice = document.querySelectorAll(".option-box");
+let options = document.querySelectorAll(".option-box");
 
-Array.from(playerChoice).forEach(element => {
+Array.from(options).forEach(element => {
     element.addEventListener("click", playGame)
 })
 
 function playGame(click) {
-    if (click.target)
+    
+    function randomChoice() {
+        return Math.floor(Math.random() * 3) + 1
+    }
+
+    let playerChoice = click.target.id;
+    let compChoice = randomChoice()
+
+    
 }
