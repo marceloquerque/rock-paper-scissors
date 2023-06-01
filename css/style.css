@@ -12,17 +12,24 @@ img {
 body {
     background-color: #001c40;
     color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    gap: 1.5rem;
     font-family: 'Roboto', sans-serif;
 }
 
+.header {
+    background-color: #001c40;
+    border-bottom: 4px dotted #183153;
+    height: 100px;
+}
+
 .title {
+    position: relative;
+    top: 30px;
     font-family: 'Press Start 2P';
+}
+
+.main {
+    margin: 20px 0;
 }
 
 .scores-container {
@@ -58,10 +65,12 @@ body {
 .footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 
-.footer img {
-    width: 32px;
-    
+.footer a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
 }
