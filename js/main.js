@@ -5,24 +5,28 @@ Array.from(options).forEach(element => {
 })
 
 function playGame(click) {
-    
+    let showPlayerChoice = document.querySelector(".player-choice");
+
     function randomChoice() {
         return Math.floor(Math.random() * 3) + 1
     }
 
-    let getClick = click.target.id;
+    const getClick = click.target.id;
     function returnPlayerChoice(getClick) {
         if (getClick === "rock") {
+            showPlayerChoice.innerHTML = "✊"
             return 1
         } else if (getClick === "paper") {
+            showPlayerChoice.innerHTML = "✋"
             return 2
         } else if (getClick === "scissors"){
+            showPlayerChoice.innerHTML = "✌"
             return 3
         }
     }  
-    
-    let playerChoice = returnPlayerChoice(getClick)
-    let compChoice = randomChoice()
+
+    const playerChoice = returnPlayerChoice(getClick)
+    const compChoice = randomChoice()
 
     console.log(playerChoice)
     console.log(compChoice)
