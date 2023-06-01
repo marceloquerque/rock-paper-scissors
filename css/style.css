@@ -9,6 +9,10 @@ img {
     max-width: 100%;
 }
 
+h1, h2, h3, h4 {
+    line-height: 2.2rem;
+}
+
 body {
     position: relative;
     min-height: 100vh;
@@ -31,7 +35,7 @@ body {
 }
 
 .main {
-    margin: 20px 0;
+    margin: 50px 0;
 }
 
 .scores-container {
@@ -44,10 +48,12 @@ body {
 .score-box .choice {
     font-size: 4.2rem;
     font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .score-box .score {
     font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .option {
@@ -55,6 +61,7 @@ body {
     justify-content: center;
     gap: 2.5rem;
     font-size: 4.5rem;
+    margin-bottom: 30px;
 }
 
 .option-box {
@@ -83,9 +90,9 @@ body {
     border: 1px solid white;
     border-radius: .5rem;
     background-color: #ffd43b;
-    opacity: .85;
-    height: 130px;
-    width: 230px;
+    /* opacity: .85; */
+    height: 150px;
+    width: 255px;
     padding: 20px 20px;
     visibility: hidden;
 }
