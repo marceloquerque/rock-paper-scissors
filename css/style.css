@@ -10,6 +10,7 @@ img {
 }
 
 body {
+    position: relative;
     background-color: #001c40;
     color: aliceblue;
     text-align: center;
@@ -62,7 +63,7 @@ body {
     padding: 20px 30px;
 }
 
-.restart {
+.restart, .popup-btn {
     background-color: #183153;
     margin-top: 40px;
     padding: 10px 30px;
@@ -71,6 +72,26 @@ body {
     cursor: pointer;
     color: aliceblue;
     font-weight: bold;
+}
+
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid white;
+    border-radius: .5rem;
+    background-color: #ffd43b;
+    opacity: .85;
+    height: 130px;
+    width: 230px;
+    padding: 20px 20px;
+    visibility: hidden;
+}
+
+#popup h3 {
+    font-family: 'Press Start 2P';
+    color: #001c40;
 }
 
 .footer {

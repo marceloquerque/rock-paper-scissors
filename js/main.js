@@ -14,6 +14,12 @@ let playerScore = 0;
 let compScore = 0;
 
 document.querySelector(".restart").addEventListener("click", restartGame)
+document.querySelector(".popup-btn").addEventListener("click", closePopUP)
+
+function closePopUP() {
+    document.querySelector("#popup").style.visibility = "hidden"
+    restartGame()
+}
 
 function restartGame() {
     playerScore = 0;
@@ -78,4 +84,8 @@ function playGame(click) {
 
     console.log(playerChoice)
     console.log(compChoice)
+    if (playerScore === 5 || compScore === 5) {
+        document.querySelector("#popup").style.visibility = "visible"
+        document.querySelector(".popup-winner").innerHTML = scoreInfo.innerHTML
+    }
 }
