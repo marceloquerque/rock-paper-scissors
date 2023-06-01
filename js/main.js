@@ -11,6 +11,8 @@ function playGame(click) {
         return Math.floor(Math.random() * 3) + 1
     }
 
+    const compChoice = randomChoice()
+
     const getClick = click.target.id;
     function returnPlayerChoice(getClick) {
         if (getClick === "rock") {
@@ -24,9 +26,8 @@ function playGame(click) {
             return 3
         }
     }  
-
+    
     const playerChoice = returnPlayerChoice(getClick)
-    const compChoice = randomChoice()
 
     console.log(playerChoice)
     console.log(compChoice)
