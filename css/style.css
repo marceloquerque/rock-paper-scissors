@@ -18,7 +18,7 @@ body {
 
 .header {
     background-color: #001c40;
-    border-bottom: 4px dotted #183153;
+    border-bottom: 6px dotted #183153;
     height: 100px;
 }
 
@@ -60,6 +60,17 @@ body {
     background-color: #183153;
     border-radius: .5rem;
     padding: 20px 30px;
+}
+
+.restart {
+    background-color: #183153;
+    margin-top: 40px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    color: aliceblue;
+    font-weight: bold;
 }
 
 .footer {
