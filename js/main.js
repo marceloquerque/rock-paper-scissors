@@ -26,6 +26,9 @@ function restartGame() {
     })
 }
 // test asd
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 function playGame(click) {
