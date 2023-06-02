@@ -1,11 +1,6 @@
 let options = document.querySelectorAll(".option-box");
 let restartBtn = document.querySelector(".restart-btn");
 let popupBtn = document.querySelector(".popup-btn");
-
-Array.from(options).forEach(element => {
-    element.addEventListener("click", playGame)
-})
-
 let showPlayerChoice = document.querySelector(".player-choice");
 let showCompChoice = document.querySelector(".comp-choice");
 let scoreInfo = document.querySelector(".score-info");
@@ -15,6 +10,11 @@ let compScoreElement = document.querySelector(".comp-score");
 let playerScore = 0;
 let compScore = 0;
 
+<<<<<<< Updated upstream
+Array.from(options).forEach(element => {
+    element.addEventListener("click", playGame)
+})
+=======
 restartBtn.addEventListener("click", restartGame)
 popupBtn.addEventListener("click", restartGame)
 function restartGame() {
@@ -25,9 +25,12 @@ function restartGame() {
         window.location.reload();
     })
 }
+// test asd
+>>>>>>> Stashed changes
 
 function playGame(click) {
     const playerChoice = click.target.id;
+    const compChoice = randomChoice()
     
     function randomChoice() {
         let choice = Math.floor(Math.random() * 3) + 1
@@ -42,8 +45,6 @@ function playGame(click) {
             return "scissors"
         }
     }
-
-    const compChoice = randomChoice()
 
     function returnPlayerChoice() {
         if (playerChoice === "rock") {
@@ -76,10 +77,22 @@ function playGame(click) {
 
     roundWinner(playerChoice, compChoice)
 
-    console.log(playerChoice)
-    console.log(compChoice)
     if (playerScore === 5 || compScore === 5) {
         document.querySelector("#popup").style.visibility = "visible"
         document.querySelector(".popup-winner").innerHTML = scoreInfo.innerHTML
+        Array.from(options).forEach(element => {
+            element.removeEventListener("click", playGame)
+        })
     }
+}
+
+restartBtn.addEventListener("click", restartGame)
+popupBtn.addEventListener("click", restartGame)
+function restartGame() {
+    restartBtn.addEventListener('click', () => {
+        window.location.reload();
+    })
+    popupBtn.addEventListener('click', () => {
+        window.location.reload();
+    })
 }
