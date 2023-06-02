@@ -1,4 +1,6 @@
 let options = document.querySelectorAll(".option-box");
+let restartBtn = document.querySelector(".restart-btn");
+let popupBtn = document.querySelector(".popup-btn");
 
 Array.from(options).forEach(element => {
     element.addEventListener("click", playGame)
@@ -13,23 +15,15 @@ let compScoreElement = document.querySelector(".comp-score");
 let playerScore = 0;
 let compScore = 0;
 
-document.querySelector(".restart").addEventListener("click", restartGame)
-document.querySelector(".popup-btn").addEventListener("click", closePopUP)
-
-function closePopUP() {
-    document.querySelector("#popup").style.visibility = "hidden"
-    restartGame()
-}
-
+restartBtn.addEventListener("click", restartGame)
+popupBtn.addEventListener("click", restartGame)
 function restartGame() {
-    playerScore = 0;
-    compScore = 0;
-    scoreInfo.innerHTML = "Choose your weapon"
-    scoreMessage.innerHTML = "First to score 5 points wins the game"
-    showPlayerChoice.innerHTML = "❔"
-    showCompChoice.innerHTML = "❔"
-    playerScoreElement.innerHTML = "0"
-    compScoreElement.innerHTML = "0"
+    restartBtn.addEventListener('click', () => {
+        window.location.reload();
+    })
+    popupBtn.addEventListener('click', () => {
+        window.location.reload();
+    })
 }
 
 function playGame(click) {

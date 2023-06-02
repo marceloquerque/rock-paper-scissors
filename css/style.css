@@ -71,7 +71,7 @@ body {
     padding: 20px 30px;
 }
 
-.restart, .popup-btn {
+.restart-btn, .popup-btn {
     background-color: #183153;
     margin-top: 40px;
     padding: 10px 30px;
@@ -87,7 +87,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px solid white;
+    border: 4px solid white;
     border-radius: .5rem;
     background-color: #ffd43b;
     /* opacity: .85; */
