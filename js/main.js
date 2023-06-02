@@ -10,11 +10,11 @@ let compScoreElement = document.querySelector(".comp-score");
 let playerScore = 0;
 let compScore = 0;
 
-<<<<<<< Updated upstream
+
 Array.from(options).forEach(element => {
     element.addEventListener("click", playGame)
 })
-=======
+
 restartBtn.addEventListener("click", restartGame)
 popupBtn.addEventListener("click", restartGame)
 function restartGame() {
@@ -25,11 +25,6 @@ function restartGame() {
         window.location.reload();
     })
 }
-// test asd
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 function playGame(click) {
     const playerChoice = click.target.id;
